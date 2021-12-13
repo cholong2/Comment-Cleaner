@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-    <h5 class="border-bottom my-3 py-2">{{question.answer_set.count}}개의 답변이 있습니다.</h5>
+    <h5 class="border-bottom my-3 py-2">{{question.answer_set.count}}개의 다른 의미가 있습니다.</h5>
     {% for answer in question.answer_set.all %}
     <a name="answer_{{ answer.id }}"></a>
     <div class="row my-3">
