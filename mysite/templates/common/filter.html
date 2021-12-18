@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-3">
+    <form method="post" class="post-form" action="{% url 'common:filter' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username"> 문장을 입력해보세요 </label>
+            <input type="search" class="form-control" name="sentence" id="sentence"
+                   placeholder="비속어 및 감정 분석 ">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="필터링">
+             <input type="submit" value="감정분석">
+             <input type="submit" value="맞춤법">
+    </form>
+
+        </div>
+        <div class="form-group">
+            <label for="username"> 결과  </label><br>
+            <input id="outputBox" type="text" name="outputBox"  maxlength="100"
+            readonly="readonly" class="form-control" value="{{outputBox}}"> </div>
+        </div>
+
+
+</div>
+{% endblock %}
